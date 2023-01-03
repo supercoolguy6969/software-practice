@@ -9,16 +9,30 @@ import SwiftUI
 
 struct VideoListView: View {
     var body: some View {
-        HStack {
+        
+        
+        
+        List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
             
             Image("average-dev")
                 .resizable()
                 .scaledToFit()
                 .frame(height: 70)
-                .cornerRadius(9)
+                .cornerRadius(4)
             
-            Text("I am an average developer")
-                .fontWeight(.)
+            VStack(alignment: .leading, spacing: 5){
+                Text("I am an average developer")
+                    .font(.headline)
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.5)
+                    
+                
+                Text("Jan 20, 2022")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+            }
+     
+            
         }
     
         
